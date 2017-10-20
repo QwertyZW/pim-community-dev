@@ -62,7 +62,7 @@ define(
 
             /**
              * Returns a list of choices that are allowed by permissions
-             * @return {[type]} [description]
+             * @return {Object} choices
              */
             getAllowedChoices(choices) {
                 return _.filter(choices, choice => {
@@ -106,7 +106,7 @@ define(
 
             /**
              * Opens a form model for the selected choice. If formName is passed in, it
-             * overrides getting the formName from the event target element.
+             * overrides the formName from the event target element.
              *
              * @param  {jQuery.Event} event The click event from the selection modal
              * @param  {String} formName The name of the form extension defined for a choice
@@ -124,7 +124,7 @@ define(
             /**
              * Render the create button
              * If the user is not allowed to create products and product models,
-             * don't render the create button
+             * don't render the create button.
              */
             render() {
                 const { choices, buttonTitle } = this.config;
