@@ -128,7 +128,9 @@ define(
              */
             render() {
                 const { choices, buttonTitle } = this.config;
+
                 if (this.getAllowedChoices(choices).length === 0) {
+                    this.$el.hide();
                     return;
                 }
 
