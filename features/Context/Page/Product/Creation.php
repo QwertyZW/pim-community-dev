@@ -37,7 +37,7 @@ class Creation extends Form
         $matchingContainer = null;
 
         foreach ($selectContainers as $container) {
-            if ($container->find('css', sprintf('.select2-chosen:contains("%s")', $locator))){
+            if ($container->find('css', sprintf('.select2-chosen:contains("%s")', $locator))) {
                 $matchingContainer = $container;
             }
         }
