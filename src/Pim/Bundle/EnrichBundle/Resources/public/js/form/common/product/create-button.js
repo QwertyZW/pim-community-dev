@@ -123,7 +123,7 @@ define(
 
             /**
              * Render the create button
-             * If the user is not allowed to create products and product models,
+             * If the user is not allowed to access the forms for the choices
              * don't render the create button.
              */
             render() {
