@@ -85,6 +85,7 @@ define(
 
                 if (allowedChoices.length === 1) {
                     const firstChoice = allowedChoices[0];
+
                     return this.openFormModal(null, firstChoice.form);
                 }
 
@@ -131,6 +132,7 @@ define(
 
                 if (this.getAllowedChoices(choices).length === 0) {
                     this.$el.hide();
+
                     return;
                 }
 
