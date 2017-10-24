@@ -108,6 +108,15 @@ define(
             },
 
             /**
+             * {@inheritdoc}
+             */
+            shutdown: function () {
+                this.modal.$el.off();
+
+                BaseForm.prototype.shutdown.apply(this, arguments);
+            },
+
+            /**
              * Opens a form model for the selected choice. If formName is passed in, it
              * overrides the formName from the event target element.
              *
