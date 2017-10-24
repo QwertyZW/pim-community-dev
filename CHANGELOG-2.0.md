@@ -4,6 +4,7 @@
 
 - GITHUB-7035: Change class alias for proper LocaleType form parent indication, cheers @mkilmanas!
 - PIM-6567: Fix attributes filter to not remove axes
+- API-411: Fix error 500 when product model has no values
 
 ## Better manage products with variants!
 
