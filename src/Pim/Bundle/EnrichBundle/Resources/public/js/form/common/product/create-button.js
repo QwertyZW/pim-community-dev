@@ -111,7 +111,9 @@ define(
              * {@inheritdoc}
              */
             shutdown: function () {
-                this.modal.$el.off();
+                if (this.modal) {
+                    this.modal.$el.off();
+                }
 
                 BaseForm.prototype.shutdown.apply(this, arguments);
             },
