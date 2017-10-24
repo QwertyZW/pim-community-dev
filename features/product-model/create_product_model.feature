@@ -23,9 +23,9 @@ Feature: Create a product model
     And I should see the Code, Family and family_variant fields
     And the field family_variant should be disabled
     Given I fill in the following information in the popin:
-    | Code             | clothing_color_and_size    |
-    | Choose a family  | Clothing                   |
-    | Choose a variant | Clothing by color and size |
+      | Code             | clothing_color_and_size    |
+      | Choose a family  | Clothing                   |
+      | Choose a variant | Clothing by color and size |
     And I press the "Save" button
     Then I should see the flash message "Product model successfully created"
     And I should be on the product model "clothing_color_and_size" edit page
@@ -40,14 +40,15 @@ Feature: Create a product model
       | code     | attributes             | label-en_US |
       | led_tvs  | name,display_diagonal  | LED TVs     |
     And the following family variants:
-     | code  | family  | variant-axes_1    | variant-attributes_1 | label-en_US |
-     | tv    | led_tvs | display_diagonal  | name                 | LED TV      |
+      | code  | family  | variant-axes_1    | variant-attributes_1 | label-en_US |
+      | tv    | led_tvs | display_diagonal  | name                 | LED TV      |
     And I should see the Code, Family and family_variant fields
     And the field family_variant should be disabled
     Given I fill in the following information in the popin:
-    | Code             | tv_display_diagonal |
-    | Choose a family  | LED TVs             |
-    | Choose a variant | LED TV              |
+      | Code             | tv_display_diagonal |
+      | Choose a family  | LED TVs             |
+    Then I should see the text "LED TVs"
+    And I should see the text "LED TV"
     And I press the "Save" button
     Then I should see the flash message "Product model successfully created"
     And I should be on the product model "tv_display_diagonal" edit page
@@ -58,9 +59,9 @@ Feature: Create a product model
     And I should see the Code, Family and family_variant fields
     And the field family_variant should be disabled
     Given I fill in the following information in the popin:
-    | Code             | clothing_color_size    |
-    | Choose a family  | Clothing               |
-    | Choose a variant | Clothing by color/size |
+      | Code             | clothing_color_size    |
+      | Choose a family  | Clothing               |
+      | Choose a variant | Clothing by color/size |
     And I press the "Save" button
     Then I should see the flash message "Product model successfully created"
     And I should be on the product model "clothing_color_size" edit page
