@@ -51,7 +51,6 @@ class FamilyRepository extends EntityRepository implements FamilyRepositoryInter
      */
     public function getWithVariants($search = null, array $options = [], int $limit): array
     {
-
         $qb = $this->createQueryBuilder('f')->where('f.familyVariants IS NOT EMPTY');
 
         if (null !== $search && '' !== $search) {
